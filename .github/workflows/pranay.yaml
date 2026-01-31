@@ -1,0 +1,16 @@
+name: Pranay Workflow
+
+[cite_start]on: [push] # Triggered on push 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Action 1 - Print a greeting
+        run: echo "Starting the automated workflow for YourName"
+
+      - name: Action 2 - Check Python Version
+        run: python --version
