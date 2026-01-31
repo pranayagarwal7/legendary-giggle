@@ -1,16 +1,19 @@
 name: Pranay Workflow
 
-[cite_start]on: [push] # Triggered on push 
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: 1. Checkout code
         uses: actions/checkout@v4
 
-      - name: Action 1 - Print a greeting
-        run: echo "Starting the automated workflow for YourName"
+      - name: 2. Print a greeting
+        run: echo "Starting the automated workflow for Pranay"
 
-      - name: Action 2 - Check Python Version
+      - name: 3. Check Python Version
         run: python --version
+
+      - name: 4. List Repository Files
+        run: ls -R
